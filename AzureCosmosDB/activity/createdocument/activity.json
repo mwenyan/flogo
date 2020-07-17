@@ -1,0 +1,55 @@
+{
+    "name": "createdocument",
+    "title": "Create Document",
+    "version": "1.0.0",
+    "type": "flogo:activity",
+    "author": "TIBCO Software Inc.",
+    "display": {
+       "category": "AzureCosmosDB",
+       "visible": true,
+       "smallIcon": "insert.png",
+       "description": "upsert document"
+    },
+    "feature": {
+        "iterator": {
+                "type": "iterator",
+                "enabled": true
+        }
+    },
+    "ref": "github.com/TIBCOSoftware/azure/AzureCosmosDB/activity/createdocument",
+    "inputs": [
+            {
+                "name": "connector",
+                "type": "connection",
+                "required": true,
+                "display": {
+                    "name": "Connection to Azure CosmosDB",
+                    "type": "connection"
+                },
+                "allowed":[]
+            },
+            {
+                "name": "document",
+                "type": "complexObject",
+                "required":true,
+                "display": {
+                    "name": "document schema",
+                    "type": "texteditor",
+                    "syntax": "json"
+                }
+            },
+            {
+                "name": "input",
+                "type": "complex_object",
+                "required": true
+            }
+    ],
+  
+    "outputs": [
+        {
+            "name": "output",
+            "type": "complex_object",
+            "required": false
+       }
+    ]
+}

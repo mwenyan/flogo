@@ -1,0 +1,61 @@
+{
+  "title": "AzureServiceBus Publish",
+  "name": "azservicebus-publish",
+  "version": "1.0",
+  "author": "TIBCO Software Inc.",
+  "type": "flogo:activity",
+  "display": {
+    "category": "AzureServiceBus",
+    "visible": true,
+    "description": "AzureServiceBus Publish Activity",
+    "smallIcon": "icons/azservicebus-publish@2x.png",
+    "largeIcon": "icons/azservicebus-publish@3x.png"
+  },
+  "ref": "git.tibco.com/git/product/ipaas/wi-azservicebus.git/src/app/AzureServiceBus/activity/publish",
+  "inputs": [{
+      "name": "Connection",
+      "type": "object",
+      "required": true,
+      "display": {
+        "name": "Connection",
+        "description": "Choose a AzureServiceBus Connection",
+        "type": "connection",
+        "visible": true
+      },
+      "allowed": []
+    },
+    {
+      "name": "entityType",
+      "type": "string",
+      "required": true,
+      "allowed": [ "Queue","Topic"],
+      "display": {
+        "name": "Entity Type",
+        "description": "AzureServiceBus entity type to publish message",
+        "type": "dropdown",
+        "selection": "single",
+        "visible": true
+      },
+      "value":"Queue"           
+    },   
+    {
+      "name": "entityName",
+      "type": "string",
+      "required": true,      
+      "display": {
+        "name": "Entity Name",
+        "description": "AzureServiceBus entity name to publish message",       
+        "visible": false
+      }
+    },
+    {
+      "name": "input",
+      "type": "complex_object"
+    }    
+  ],
+
+  "outputs": [{
+    "name": "output",
+    "type": "complex_object"
+  }]
+}

@@ -1,0 +1,76 @@
+{
+    "name": "CosmosDBConnector",
+    "version": "1.0.0",
+    "title": "AZure CosmosDB Connector",
+    "type": "flogo:connector",
+    "author": "TIBCO Software Inc.",
+    "display": {
+        "description": "connection info for azure cosmosdb",
+        "category": "AzureCosmosDB",
+        "visible": true,
+        "smallIcon": "cosmos.png",
+        "largeIcon": "cosmos.png",
+        "connectionsupport": true
+    },
+    "ref": "github.com/TIBCOSoftware/azure/AzureCosmosDB/connector/cosmosdb",
+    "keyfield": "name",
+    "settings": [
+        {
+            "name": "name",
+            "type": "string",
+            "required": true,
+            "display": {
+                "name": "Connector Name",
+                "visible": true
+            }
+        },
+        {
+            "name": "account",
+            "type": "string",
+            "required": true,
+            "display": {
+                "name": "Azure Cosmos DB account",
+                "visible": true,
+                "appPropertySupport":true 
+            }
+        },
+        {
+            "name": "key",
+            "type": "string",
+            "display": {
+                "visible":true,
+                "name": "Master Key",
+                "description": "Azure Cosmos DB Master Key",
+                "appPropertySupport":true
+            }
+        },
+        {
+            "name": "api",
+            "type": "string",
+            "display": {
+                "visible":true,
+                "name": "API Version",
+                "description": "Azure Cosmos DB Rest API Version",
+                "appPropertySupport":true
+            },
+            "value": "2018-12-31"
+        },
+        {
+            "name": "timeout",
+            "type": "integer",
+            "display": {
+                "visible":true,
+                "name": "Timeout Value in Seconds",
+                "description": "Operation timeout in seconds",
+                "appPropertySupport":true
+            },
+            "value": "10"
+        }
+    ],
+    "actions": [ 
+        
+        {
+            "name": "Done"
+        }
+    ]
+}
