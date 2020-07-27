@@ -1,4 +1,4 @@
-module github.com/TIBCOSoftware/azure/cosmosdb
+module github.com/mwenyan/azure/function/cosmosdb
 
 go 1.14
 

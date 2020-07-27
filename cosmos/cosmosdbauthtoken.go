@@ -13,7 +13,7 @@ import (
 	"github.com/project-flogo/core/support/log"
 )
 
-// CosmosdbAuthToken struct
+// CosmosdbAuthToken dummy struct
 type CosmosdbAuthToken struct {
 }
 
