@@ -1,0 +1,42 @@
+{
+    "name": "funit",
+    "author": "TIBCO Software Inc.",
+    "type": "flogo:trigger",
+    "version": "1.0.0",
+    "title": "Flogo Unit Test",
+
+    "display": {
+       "description": "Start a unit test",
+       "uid": "funit-initiator",
+       "category": "funit",
+       "visible": true, 
+       "smallIcon": "trigger.png",
+       "largeIcon": "trigger.png"
+    },
+    "useReplyHandler": true,
+    "ref": "github.com/mwenyan/funit/trigger/funit",
+         
+    "settings": [
+       
+    ],
+ 
+    "handler": {
+      "settings": [
+     ]
+    },
+    "outputs": [
+
+    ],
+    "reply": [
+      {
+        "name": "report",
+        "type": "complex_object",
+        "value": {
+            "metadata": "",
+            "value": "[{\"assertion\": \"\", \"pass\": true, \"message\": \"\" }]"
+        }
+      }
+    ],
+    "actions": [
+    ]
+}

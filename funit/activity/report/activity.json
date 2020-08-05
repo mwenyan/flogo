@@ -1,0 +1,30 @@
+{
+    "name": "report",
+    "title": "Collect Unit Testing Report",
+    "version": "1.0.0",
+    "type": "flogo:activity",
+    "author": "TIBCO Software Inc.",
+    "display": {
+       "category": "funit",
+       "visible": true,
+       "smallIcon": "report.png",
+       "description": "collect unit testing report"
+    },
+    "feature": {
+        "iterator": {
+                "type": "iterator",
+                "enabled": false
+        }
+    },
+    "ref": "github.com/mwenyan/funit/activity/report",
+    "inputs": [
+           
+    ],
+    "outputs": [
+        {
+            "name": "output",
+            "type": "complex_object",
+            "required": false
+       }
+    ]
+}

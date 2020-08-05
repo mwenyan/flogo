@@ -1,0 +1,63 @@
+{
+    "name": "assertion",
+    "title": "Assertion",
+    "version": "1.0.0",
+    "type": "flogo:activity",
+    "author": "TIBCO Software Inc.",
+    "display": {
+       "category": "funit",
+       "visible": true,
+       "smallIcon": "assert.png",
+       "description": "assertion"
+    },
+    "feature": {
+        "iterator": {
+                "type": "iterator",
+                "enabled": false
+        }
+    },
+    "ref": "github.com/mwenyan/funit/activity/assertion",
+    "inputs": [
+            {
+                "name": "name",
+                "type": "string",
+                "required":true,
+                "display": {
+                    "name": "Description",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "msg",
+                "type": "string",
+                "required":false,
+                "display": {
+                    "name": "Message",
+                    "description":"Custom message if assertion failed, use %v as placehold for input variable, e.g. expected value %v is not equal to acutal value %v",
+                    "type": "string"
+                }
+            },
+            {
+                "name": "abort",
+                "type": "boolean",
+                "required":true,
+                "display": {
+                    "name": "Abort testing if assertion fails",
+                    "type": "boolean"
+                },
+                "value":false
+            },
+            {
+                "name": "input",
+                "type": "complex_object",
+                "required": true
+            }
+    ],
+    "outputs": [
+        {
+            "name": "output",
+            "type": "complex_object",
+            "required": false
+       }
+    ]
+}

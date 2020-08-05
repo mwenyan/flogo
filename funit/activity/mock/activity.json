@@ -1,0 +1,52 @@
+{
+    "name": "mock",
+    "title": "Mock a Subflow",
+    "version": "1.0.0",
+    "type": "flogo:activity",
+    "author": "TIBCO Software Inc.",
+    "display": {
+       "category": "funit",
+       "visible": true,
+       "smallIcon": "mock.png",
+       "description": "mock a subflow"
+    },
+    "feature": {
+        "iterator": {
+                "type": "iterator",
+                "enabled": false
+        }
+    },
+    "ref": "github.com/mwenyan/funit/activity/mock",
+    "dynamicIO": true,
+    "settings": [
+        {
+        "name": "flowURI",
+        "type": "string",
+        "required": true
+        },
+        {
+            "name": "mockOuput",
+            "type": "complex_object",
+            "display": {
+                "name": "Mocked output value",
+                "type": "texteditor",
+                "syntax": "json"
+            }
+        }
+    ],
+    "inputs":[
+        {
+            "name": "input",
+            "type": "complex_object",
+            "required": false
+       }
+    ],
+    "outputs": [
+        {
+            "name": "output",
+            "type": "complex_object",
+            "required": false
+       }
+
+    ]
+}
