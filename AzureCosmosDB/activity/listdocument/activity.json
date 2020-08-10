@@ -1,0 +1,55 @@
+{
+    "name": "listdocument",
+    "title": "List Documents",
+    "version": "1.0.0",
+    "type": "flogo:activity",
+    "author": "TIBCO Software Inc.",
+    "display": {
+       "category": "AzureCosmosDB",
+       "visible": true,
+       "smallIcon": "list.png",
+       "description": "list documents"
+    },
+    "feature": {
+        "iterator": {
+                "type": "iterator",
+                "enabled": false
+        }
+    },
+    "ref": "github.com/TIBCOSoftware/azure/AzureCosmosDB/activity/listdocument",
+    "inputs": [
+            {
+                "name": "connector",
+                "type": "connection",
+                "required": true,
+                "display": {
+                    "name": "Connection to Azure CosmosDB",
+                    "type": "connection"
+                },
+                "allowed":[]
+            },
+            {
+                "name": "document",
+                "type": "complexObject",
+                "required":true,
+                "display": {
+                    "name": "Output Document Schema",
+                    "type": "texteditor",
+                    "syntax": "json"
+                }
+            },
+            {
+                "name": "input",
+                "type": "complex_object",
+                "required": true
+            }
+    ],
+  
+    "outputs": [
+        {
+            "name": "output",
+            "type": "complex_object",
+            "required": false
+       }
+    ]
+}

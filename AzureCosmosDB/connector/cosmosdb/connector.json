@@ -39,6 +39,8 @@
             "type": "string",
             "display": {
                 "visible":true,
+                "type": "password",
+                "encryptable":true,
                 "name": "Master Key",
                 "description": "Azure Cosmos DB Master Key",
                 "appPropertySupport":true

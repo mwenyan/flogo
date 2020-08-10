@@ -1,0 +1,57 @@
+{
+    "name": "mock",
+    "author": "TIBCO Software Inc.",
+    "type": "flogo:trigger",
+    "version": "1.0.0",
+    "title": "FUnit Mock Flow",
+
+    "display": {
+       "description": "Create a mock flow",
+       "uid": "funit-mock",
+       "category": "funit",
+       "visible": true, 
+       "wizard": ["Flow Settings"],
+       "smallIcon": "mock.png",
+       "largeIcon": "mock.png"
+    },
+    "ref": "github.com/mwenyan/funit/trigger/mock",
+         
+    "settings": [
+      {
+        "name": "testing",
+        "type": "string"
+      }
+       
+    ],
+ 
+    "handler": {
+      "settings": [
+        {
+          "name": "flowURI",
+          "type": "string",
+          "required": true,
+          "display": {
+            "name": "Select the flow to mock",
+            "type": "dropdown",
+            "select": "single"
+          },
+          "wizard": {
+            "step": "Flow Settings",
+            "type": "dropdown",
+            "select": "single"
+          }
+        }
+     ]
+    },
+    "outputs": [
+
+    ],
+    "reply": [
+      
+    ],
+    "actions": [
+      {
+        "name": "Finish"
+      }
+    ]
+}

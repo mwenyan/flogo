@@ -1,0 +1,45 @@
+{
+    "name": "deletedocument",
+    "title": "Delete Document",
+    "version": "1.0.0",
+    "type": "flogo:activity",
+    "author": "TIBCO Software Inc.",
+    "display": {
+       "category": "AzureCosmosDB",
+       "visible": true,
+       "smallIcon": "delete.png",
+       "description": "delete document"
+    },
+    "feature": {
+        "iterator": {
+                "type": "iterator",
+                "enabled": true
+        }
+    },
+    "ref": "github.com/TIBCOSoftware/azure/AzureCosmosDB/activity/deletedocument",
+    "inputs": [
+            {
+                "name": "connector",
+                "type": "connection",
+                "required": true,
+                "display": {
+                    "name": "Connection to Azure CosmosDB",
+                    "type": "connection"
+                },
+                "allowed":[]
+            },
+            {
+                "name": "input",
+                "type": "complex_object",
+                "required": true
+            }
+    ],
+  
+    "outputs": [
+        {
+            "name": "output",
+            "type": "complex_object",
+            "required": false
+       }
+    ]
+}

@@ -1,6 +1,7 @@
 package assert
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -24,9 +25,14 @@ func TestAssertEqual(t *testing.T) {
 	assert.Equal(t, m1, m2)
 }
 
-func TestAssertTrue(t *testing.T) {
-	aeq := &AssertTrue{}
-	r, err := aeq.Eval(true)
-	assert.True(t, r.(bool))
+func TestColor(t *testing.T) {
+	//#ffa500
+	c, err := getColorName("#ffa500")
 	assert.Nil(t, err)
+
+	fmt.Println(c)
+
+	c, _ = getColorName("#ff0000")
+	fmt.Println(c)
+
 }

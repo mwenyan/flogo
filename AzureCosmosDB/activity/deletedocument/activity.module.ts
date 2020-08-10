@@ -2,7 +2,7 @@ import { HttpModule } from "@angular/http";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { MockActivityContributionHandler} from "./activity";
+import { DeleteDocumentActivityContributionHandler} from "./activity";
 import { WiServiceContribution} from "wi-studio/app/contrib/wi-contrib";
 
 @NgModule({
@@ -16,12 +16,12 @@ import { WiServiceContribution} from "wi-studio/app/contrib/wi-contrib";
   providers: [
     {
        provide: WiServiceContribution,
-       useClass: MockActivityContributionHandler
+       useClass: DeleteDocumentActivityContributionHandler
      }
   ],
   bootstrap: []
 })
 
-export default class MockActivityModule {
+export default class DeleteDocumentActivityModule {
 
 }
